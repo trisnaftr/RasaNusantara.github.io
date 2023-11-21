@@ -1,0 +1,342 @@
+:root{
+    --container-width : 1100px;
+}
+
+* {
+    box-sizing: border-box;
+    }
+    html, body {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.button {
+    border-radius: 15px;
+    padding: 15px 15px 8px 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 20px;
+  }
+.button:hover {
+    background-color: rgba(169, 27, 27);
+    transition: all 0.3s;
+    height: 50px;
+    margin-top: 5px;
+    padding-bottom: 12%;
+  }
+
+.nav-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: rgba(169, 27, 27);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: block;
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+#hamburger-toggle:checked + .hamburger + .menu {
+    display: flex;
+}
+
+.hamburger {
+    display: block;
+    margin: 25px 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu li a:hover {
+    color: white;
+    transition: all 0.3s;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    color: rgba(169, 27, 27);
+    padding: 0 1.5em;
+    height: 60px;
+    line-height: 60px;
+    }
+
+     /* BREAKPOINT TABLET */
+     @media screen and (max-width: 768px){
+
+        /* Kode CSS Di Sini */
+        .nav-container header {
+            flex-direction: column;
+        }
+        .menu {
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff8e7;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            display: none;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+
+        .menu ul {
+            flex-direction: column;
+            width: 100%;
+        }
+    
+        .menu li {
+            margin: 10px;
+        }
+        
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            margin: 25px 0;
+        }
+        #hamburger-toggle:checked + .hamburger + .menu {
+            display: flex;
+        }
+        
+
+    }
+    
+    /* BREAKPOINT HANDPHONE */
+        @media screen and (max-width: 481px){
+        /* Kode CSS Di Sini */
+        .footer-menu section {
+            width: 100%;
+            margin-bottom: 2rem;
+            }
+}
+
+/*Hero*/
+.hero-container {
+    background-image: url(gambar/hero_background1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: left;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 14%;
+    line-height: 0.5;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    color: rgba(169, 27, 27);
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color:black;
+}
+
+
+/*Showcase*/
+.showcase-container {
+    max-width: var(--container-width);
+    margin: 2rem auto;
+}
+
+.showcase-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase-menu section{
+    flex: 1;
+    text-align: left;
+    padding-left: 60px;
+    
+}
+.showcase-menu section p {
+    color: gray;
+    text-align: right;
+    padding-right: 90px;
+}
+.showcase-menu section p:hover {
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.showcase-index{
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    padding: 0 2%;
+   
+}
+.showcase-index .snippet {
+    background-color: beige;
+    border-radius: 15px;
+    width: 200px;
+    height: 300px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+    padding: 9px;
+    border: 2px  grey;
+}
+.showcase-index .snippet-img {
+    width: 100%;
+    border-radius: 15px;
+}
+.showcase-index .snippet-txt {
+    padding-bottom: 70px;
+}
+
+.fa-layers {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .fa-layers i {
+    position: absolute;
+    top: -410px;
+    left: 160px;
+  }
+  
+  .fa-solid.fa-bookmark {
+    /* Gaya untuk ikon bookmark */
+    color: #333; /* Ganti dengan warna yang diinginkan */
+    font-size: 24px; /* Ganti dengan ukuran yang diinginkan */
+  }
+  .fa-solid.fa-bookmark:hover{
+    color: rgba(169, 27, 27);
+    transition: all 0.3s;
+    cursor:auto;
+  }
+
+
+/* BLOG */
+.blog-container:nth-child(even) {
+    background-image: url(gambar/Vector\ 6.png);
+    background-size: 1500px 600px;
+    background-position: center;
+}
+.blog-container h1{
+    color: rgba(169, 27, 27);
+}
+.blog {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2em ;
+    align-items: center;
+}
+.blog-image, .blog-text{
+    width: 80%;
+    margin: 1em;
+    padding-top: 150px;
+    
+}
+.blog-image img{
+    width: 80%;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+    border-radius: 15px;
+}
+
+/* FOOTER */
+.footer-container {
+    background-color: #cdb891;
+    color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-menu h1{
+    color: rgba(169, 27, 27);
+  }
+
+  .footer-menu section {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 0.5;
+  }
+  
+  .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer-copyright small {
+    font-size: 12px;
+  }
+  
+  .footer-copyright a {
+    color: black;
+    margin-left: 10px;
+  }
+  
+  /* Style HR (Horizontal Rule) */
+  hr {
+    border: 0;
+    height: 1px;
+    background: black;
+    margin: 20px 0;
+  }
+  
+  .footer-copyright a:hover {
+    text-decoration: underline;
+  }
+  
